@@ -34,7 +34,7 @@ public class NotificationFollowerPatches {
     string roleIcon = FontImageNames.IconForRole(followerInfo.FollowerRole);
     if (string.IsNullOrWhiteSpace(roleIcon))
       return;
-    
+
     description.text += $" ({roleIcon})";
   }
 }

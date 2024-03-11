@@ -26,19 +26,19 @@ public class UIFollowerNamePatches {
     TMP_Text nameText = (TMP_Text)nameTextFieldInfo.GetValue(__instance);
     Follower follower = (Follower)followerFieldInfo.GetValue(__instance);
     string roleIcon = FontImageNames.IconForRole(follower.Brain.Info.FollowerRole);
-    int roleStrIndex = nameText.text.IndexOf(roleIcon, StringComparison.Ordinal);
-    
+    int roleIconIndex = nameText.text.IndexOf(roleIcon, StringComparison.Ordinal);
+
     // do not display role for old people
     if (follower.Brain.Info.OldAge || follower.Brain.HasThought(Thought.OldAge)) {
       // remove role string after becoming old
-      if (roleStrIndex > 0)
-        nameText.text = nameText.text.Remove(roleStrIndex, roleIcon.Length - 1);
+      if (roleIconIndex > 0)
+        nameText.text = nameText.text.Remove(roleIconIndex, roleIcon.Length - 1);
 
       return;
     }
 
     // job title is already applied or should not be applied
-    if (string.IsNullOrWhiteSpace(roleIcon) || roleStrIndex > 0)
+    if (string.IsNullOrWhiteSpace(roleIcon) || roleIconIndex > 0)
       return;
 
     nameText.text += $" ({roleIcon})";

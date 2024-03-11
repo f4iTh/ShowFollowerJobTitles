@@ -20,7 +20,7 @@ public static class FollowerCommandsExtensions {
       or FollowerCommands.Brew;
   }
 
-  /// <summary>Converts a <see cref="FollowerCommands" /> to a <see cref="FollowerRole" />.</summary>
+  /// <summary>Gets a <see cref="FollowerRole" /> based on the value of <see cref="FollowerCommands" />.</summary>
   /// <param name="followerCommand">The follower command.</param>
   public static FollowerRole FollowerCommandToRole(this FollowerCommands followerCommand) {
     return followerCommand switch {
