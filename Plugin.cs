@@ -1,11 +1,24 @@
 ﻿using BepInEx;
+using HarmonyLib;
 
 namespace ShowFollowerJobTitles;
 
-[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+/// <summary>The plugin entry point.</summary>
+[BepInPlugin("com.f4iTh.COTL.ShowFollowerJobTitles", "Show Follower Job Titles", "1.0.0")]
 public class Plugin : BaseUnityPlugin {
-  private void Awake() {
-    // Plugin startup logic
-    Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
+  /// <summary>The Harmony instance.</summary>
+  private readonly Harmony _harmony = new("com.f4iTh.COTL.ShowFollowerJobTitles");
+
+  /// <inheritdoc cref="Plugin.Awake" />
+  private void Awake() { }
+
+  /// <inheritdoc cref="Plugin.OnEnable" />
+  private void OnEnable() {
+    this._harmony.PatchAll();
+  }
+
+  /// <inheritdoc cref="Plugin.OnDisable" />
+  private void OnDisable() {
+    this._harmony.UnpatchSelf();
   }
 }
