@@ -1,4 +1,4 @@
-**Show Follower Job Titles** is a [Cult of the Lamb]() mod that displays a follower's current job with its respective icon. 
+**Show Follower Job Titles** is a [Cult of the Lamb](https://www.cultofthelamb.com/) mod that displays a follower's current job with its respective icon. 
 
 ![](docs/images/jobtitle.png)
 
