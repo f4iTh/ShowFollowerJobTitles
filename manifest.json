@@ -1,7 +1,7 @@
 {
   "name": "ShowFollowerJobTitles",
   "description": "A mod that displays a follower's current job with its respective icon.",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "dependencies": [],
   "website_url": "https://github.com/f4iTh/ShowFollowerJobTitles"
 }

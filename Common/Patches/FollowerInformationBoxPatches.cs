@@ -19,7 +19,7 @@ public class FollowerInformationBoxPatches {
     if (__instance.FollowerRole == null || __instance.FollowerInfo.OldAge || __instance.FollowerInfo.HasThought(Thought.OldAge))
       return;
 
-    string roleIcon = FontImageNames.IconForRole(__instance.followBrain.Info.FollowerRole);
+    string roleIcon = FontImageNames.IconForRole(__instance.followBrain?.Info.FollowerRole ?? __instance.FollowerInfo.FollowerRole);
     if (string.IsNullOrWhiteSpace(roleIcon))
       return;
 
