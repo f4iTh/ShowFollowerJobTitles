@@ -4,7 +4,6 @@ using HarmonyLib;
 using TMPro;
 
 namespace ShowFollowerJobTitles.Common.Patches;
-
 /// <summary>A class containing patches for <see cref="NotificationFollower" />.</summary>
 [HarmonyPatch]
 public class NotificationFollowerPatches {
